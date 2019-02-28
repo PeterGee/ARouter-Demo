@@ -3,6 +3,7 @@ package com.peter.appcoupon;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.cryallen.common.router.RouterPath;

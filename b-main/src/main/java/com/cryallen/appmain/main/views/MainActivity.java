@@ -48,10 +48,16 @@ public class MainActivity extends AppActivity {
         mCoupon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ICouponProvider couponProvider = (ICouponProvider) ARouter.getInstance().build(RouterPath.ROUTER_PATH_TO_COUPON_SERVICE).navigation();
-                if (couponProvider != null) {
-                    couponProvider.goToCoupon(MainActivity.this);
-                }
+                // 使用ARouter传递数据
+                Bundle bundle=new Bundle();
+                bundle.putString("name","优惠券");
+                bundle.putInt("age",10);
+                bundle.putBoolean("boolean",true);
+                 ARouter.getInstance().build(RouterPath.ROUTER_PATH_TO_COUPON_SERVICE)
+                        .withInt("age",10)
+                        .withBundle("bundle",bundle)
+                        .navigation();
+
             }
         });
     }
