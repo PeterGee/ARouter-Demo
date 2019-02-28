@@ -55,6 +55,7 @@ public class MainActivity extends AppActivity {
                 bundle.putBoolean("boolean",true);
                  ARouter.getInstance().build(RouterPath.ROUTER_PATH_TO_COUPON_SERVICE)
                         .withInt("age",10)
+                         .withString("name","peter")
                         .withBundle("bundle",bundle)
                         .navigation();
 

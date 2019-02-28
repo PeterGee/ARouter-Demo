@@ -30,8 +30,9 @@ public class CoupouActivity extends AppActivity {
     }
 
     private void handleIntentExtra() {
-        int age=getIntent().getIntExtra("age",0);
-        Log.d("peter","age-> "+age);
+       int age=getIntent().getIntExtra("age",0);
+       String name=getIntent().getStringExtra("name");
+        Log.d("peter","age-> "+age+ " name-> "+name);
     }
 
     @Override
